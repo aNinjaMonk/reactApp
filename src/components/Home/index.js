@@ -2,11 +2,12 @@ import React from 'react';
 import logo from '../../images/logo.svg';
 import './index.css';
 import { withTranslation } from 'react-i18next';
-//import API from '../../Api';
 import Header from '../Header';
 import Footer from '../Footer';
 import {  Button, Container, Row, Col, Image, Jumbotron, Carousel, Dropdown } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import * as api from '../../api/index.js';
+const firebase = require("firebase");
 
 class Index extends React.Component {
   constructor(props){
@@ -19,6 +20,9 @@ class Index extends React.Component {
 
   componentDidMount(){
     this.setState({name: "Goel"});
+    //api.fetchActivities();
+    api.getData();
+    //api.fetchActivity("EGpdZXutt90zPHX8XucQ");
   }
 
   componentWillUnmount(){
@@ -43,6 +47,7 @@ class Index extends React.Component {
             </Carousel.Item>
           </Carousel>
         </Row>
+        <Footer />
       </div>
     );
   }

@@ -1,14 +1,15 @@
 import React from 'react';
 import './index.css';
-import {  Button, Container, Row, Col, Image, Dropdown } from 'react-bootstrap';
+import {  Button, Container, Row, Col, Image, Dropdown, Form } from 'react-bootstrap';
 import { withTranslation } from 'react-i18next';
+import * as api from '../../api';
 
 class Index extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      name: "Abhijeet",
-      date: new Date()
+      email: null,
+      password: null
     }
   }
 
@@ -20,19 +21,23 @@ class Index extends React.Component {
 
   }
 
-  handleClick = () => {
-    alert('hello');
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    alert('clicked!!');
+    //api.signUp("abhijeetgoel77@gmail.com","fundoo0123");
+    //api.login("abhijeetgoel77@gmail.com","fundoo0123");
   }
 
   render(){
     const {t, i18n} = this.props;
     return (
-        <Form>
+        <Form onSubmit={this.handleSubmit}>
           <Form.Group controlId="formGroupEmail">
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control required type="email" placeholder="Email Address" />
           </Form.Group>
           <Form.Group controlId="formGroupPassword">
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control required type="password" placeholder="Password" />
           </Form.Group>
 
           <Form.Group id="formGridCheckbox">

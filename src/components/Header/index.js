@@ -4,6 +4,7 @@ import './index.css';
 import { withTranslation } from 'react-i18next';
 import logo from '../../images/logo.jpg';
 import {  Button, Container, Row, Col, Image, Jumbotron, Carousel, Dropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 class Index extends React.Component {
   constructor(props){
@@ -61,10 +62,10 @@ class Index extends React.Component {
               </Dropdown>
             </Col>
             <Col xs={1}>
-              <a href="">Log In</a>
+              <Link to="/login">Log In</Link>
             </Col>
             <Col xs={1}>
-              <a href="" className="link">Sign Up</a>
+              <Link to="/signup">Sign Up</Link>
             </Col>
           </Row>
         </Container>
