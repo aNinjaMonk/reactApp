@@ -34,7 +34,9 @@ class Index extends React.Component {
         <Container>
           <Row>
             <Col xs={4}>
-              <Image src="http://www.placehold.it/50X50" className="logo" />
+              <Link to="/">
+                <Image src="http://www.placehold.it/50X50" className="logo" />
+              </Link>
             </Col>
             <Col xs={3}>
 
@@ -52,7 +54,7 @@ class Index extends React.Component {
             </Col>
             <Col xs={1}>
               <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                <Dropdown.Toggle variant="light" id="dropdown-basic">
                   Currency
                 </Dropdown.Toggle>
                 <Dropdown.Menu>

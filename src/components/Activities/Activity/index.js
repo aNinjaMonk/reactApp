@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import {  Button, Container, Row, Col, Image, Form, Card } from 'react-bootstrap';
+import {  Button, Container, Row, Col, Image, Card } from 'react-bootstrap';
 import { withTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
@@ -26,14 +26,21 @@ class Index extends React.Component {
   }
 
   render(){
-    const {t, i18n} = this.props;
+    const {t, i18n, name, desc, price} = this.props;
     return (
-      <div>
-        <h1>Sign In</h1>
-        <Button variant="contained" color="primary">
-          Hello
-        </Button>
-      </div>
+      <Link to="/">
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src="http://placehold.it/40x40" />
+          <Card.Body>
+            <Card.Title>{name}</Card.Title>
+            <Card.Text>
+              {desc}
+            </Card.Text>
+            <Card.Text>{price}</Card.Text>
+            <Button variant="primary">Book Now</Button>
+          </Card.Body>
+        </Card>
+      </Link>
     );
   }
 }

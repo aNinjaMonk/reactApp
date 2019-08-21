@@ -21,9 +21,27 @@ class Index extends React.Component {
   render(){
     const {t, i18n} = this.props;
     return (
-      <div>
+      <Container className="footer">
         <h1>Footer</h1>
-      </div>
+        <Row>
+          <Col xs={3}>
+          </Col>
+          <Col xs={3}>
+          </Col>
+          <Col xs={3}>
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="/terms.html">Terms & Conditions</a></li>
+              <li></li>
+              <li></li>
+            </ul>
+
+          </Col>
+          <Col xs={3}>
+            <h4>Payment Mode</h4>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
