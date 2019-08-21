@@ -18,7 +18,7 @@ class App extends React.Component {
     const {t, i18n} = this.props;
     return (
       <Router>
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/signup/" component={SignUp} />
           <Route path="/login/" component={Login} />
       </Router>

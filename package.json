@@ -18,8 +18,8 @@
     "stripe": "^7.8.0"
   },
   "scripts": {
-    "start": "node ./dist/server",
-    "build": "webpack",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -48,7 +48,6 @@
     "image-webpack-loader": "^5.0.0",
     "style-loader": "^1.0.0",
     "svg-inline-loader": "^0.8.0",
-    "webpack": "^4.39.1",
     "webpack-cli": "^3.3.7",
     "webpack-node-externals": "^1.7.2"
   }

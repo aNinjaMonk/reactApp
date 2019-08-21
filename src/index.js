@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+//import App from './App.js';
 import App from './App.js';
-import App1 from './App1.js';
 import * as serviceWorker from './serviceWorker';
 import './i18n';
 
-if(typeof window !== "undefined"){
-  ReactDOM.render(<App1 />, document.getElementById('root'));
+if (typeof window !== "undefined"){
+  ReactDOM.render(<App />, document.getElementById('root'));
 }
 
 // If you want your app to work offline and load faster, you can change
