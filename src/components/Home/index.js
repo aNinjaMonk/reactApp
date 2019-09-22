@@ -53,7 +53,7 @@ class Index extends React.Component {
         <Destinations />
         <br /><br />
         <Activities />
-        <form name="contact" netlify>
+        <form name="contact" data-netlify="true" method="POST">
           <p>
             <label>Name: <input type="text" name="name" /></label>
           </p>
