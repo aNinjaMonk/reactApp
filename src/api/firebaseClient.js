@@ -3,7 +3,6 @@ const firebase = require("firebase");
 initialize();
 var db = firebase.firestore();
 
-const STRIPE_BASE = "https://api.stripe.com";
 const API_BASE = "https://reqres.in/api/";
 
 export function initialize() {
