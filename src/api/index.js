@@ -1,9 +1,13 @@
 
-const db = require('./restClient');
+const restClient = require('./restClient');
 const firebaseClient = require('./firebaseClient');
 const mockClient = require('./mockClient');
+const sqlClient = require('./sqlClient');
+const mongoClient = require('./mongoClient');
+
 export default {
-  db: db,
+  db: restClient,
+  sql: sqlClient,
   mock: mockClient
 }
 
